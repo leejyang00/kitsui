@@ -1,0 +1,26 @@
+{
+  "name": "kitsui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "dev": "bunx --bun vite --port=3002",
+    "build": "bunx --bun vite build",
+    "serve": "bunx --bun vite preview",
+    "start": "bunx --bun vite"
+  },
+  "devDependencies": {
+    "@tanstack/router-plugin": "^1.79.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.81.1",
+    "@tanstack/router-devtools": "^1.81.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
