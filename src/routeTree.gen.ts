@@ -11,11 +11,25 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as TemplatesImport } from './routes/templates'
+import { Route as SiteMapImport } from './routes/site-map'
 import { Route as BrandsImport } from './routes/brands'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const TemplatesRoute = TemplatesImport.update({
+  id: '/templates',
+  path: '/templates',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const SiteMapRoute = SiteMapImport.update({
+  id: '/site-map',
+  path: '/site-map',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const BrandsRoute = BrandsImport.update({
   id: '/brands',
@@ -60,6 +74,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandsImport
       parentRoute: typeof rootRoute
     }
+    '/site-map': {
+      id: '/site-map'
+      path: '/site-map'
+      fullPath: '/site-map'
+      preLoaderRoute: typeof SiteMapImport
+      parentRoute: typeof rootRoute
+    }
+    '/templates': {
+      id: '/templates'
+      path: '/templates'
+      fullPath: '/templates'
+      preLoaderRoute: typeof TemplatesImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -69,12 +97,16 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/brands': typeof BrandsRoute
+  '/site-map': typeof SiteMapRoute
+  '/templates': typeof TemplatesRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/brands': typeof BrandsRoute
+  '/site-map': typeof SiteMapRoute
+  '/templates': typeof TemplatesRoute
 }
 
 export interface FileRoutesById {
@@ -82,14 +114,16 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/brands': typeof BrandsRoute
+  '/site-map': typeof SiteMapRoute
+  '/templates': typeof TemplatesRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/brands'
+  fullPaths: '/' | '/about' | '/brands' | '/site-map' | '/templates'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/brands'
-  id: '__root__' | '/' | '/about' | '/brands'
+  to: '/' | '/about' | '/brands' | '/site-map' | '/templates'
+  id: '__root__' | '/' | '/about' | '/brands' | '/site-map' | '/templates'
   fileRoutesById: FileRoutesById
 }
 
@@ -97,12 +131,16 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BrandsRoute: typeof BrandsRoute
+  SiteMapRoute: typeof SiteMapRoute
+  TemplatesRoute: typeof TemplatesRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BrandsRoute: BrandsRoute,
+  SiteMapRoute: SiteMapRoute,
+  TemplatesRoute: TemplatesRoute,
 }
 
 export const routeTree = rootRoute
@@ -117,7 +155,9 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/about",
-        "/brands"
+        "/brands",
+        "/site-map",
+        "/templates"
       ]
     },
     "/": {
@@ -128,6 +168,12 @@ export const routeTree = rootRoute
     },
     "/brands": {
       "filePath": "brands.tsx"
+    },
+    "/site-map": {
+      "filePath": "site-map.tsx"
+    },
+    "/templates": {
+      "filePath": "templates.tsx"
     }
   }
 }

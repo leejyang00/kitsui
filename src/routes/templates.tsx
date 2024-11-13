@@ -1,14 +1,17 @@
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
+import CentredDescriptionComponent from "@/components/sections/centred-description";
+import CircleIconsComponent from "@/components/sections/circle-icons";
+import SocialNumbersComponent from "@/components/sections/social-numbers";
 
-export const Route = createFileRoute("/brands")({
+export const Route = createFileRoute("/templates")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
   return (
-    <div>
+    <div className="flex flex-col">
       {/* header */}
       <div className="text-[0.7rem] flex justify-center items-center text-gray-700 h-8">
         <Link
@@ -20,8 +23,11 @@ function RouteComponent() {
         <KeyboardArrowRightRoundedIcon
           sx={{ fontSize: "10", fontWeight: "200", color: "grey.700" }}
         />{" "}
-        <span className="text-gray-400">Our Brands</span>
+        <span className="text-gray-400">Templates</span>
       </div>
+      <CentredDescriptionComponent />
+      <CircleIconsComponent />
+      <SocialNumbersComponent />
     </div>
   );
 }

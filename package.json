@@ -26,6 +26,7 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.6",
     "@mui/material": "^6.1.6",
+    "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@tanstack/react-router": "^1.81.1",
     "@tanstack/router-devtools": "^1.81.1",
