@@ -9,6 +9,7 @@ function CircleIconsComponent() {
     <div>
       {/* Icon Blocks */}
       <div className="container py-16 lg:py-15 text-xs bg-slate-100 font-sans min-w-full">
+        <div className="max-w-4xl m-auto pb-3 text-lg">(2)</div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12 max-w-4xl m-auto">
           {/* Icon Block */}
           <div className="text-center">

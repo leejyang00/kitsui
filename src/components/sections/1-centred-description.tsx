@@ -11,7 +11,7 @@ function CentredDescriptionComponent() {
           {/* Grid */}
           <div className="grid gap-12">
             <div>
-              <h2 className="text-3xl font-bold lg:text-2xl">Our Vision</h2>
+              <h2 className="text-3xl font-bold lg:text-2xl">(1) Our Vision</h2>
               <p className="mt-3 text-muted-foreground">
                 For as long as there have been cities, the public square has
                 been a fundamental part of the urban landscape - an open,

@@ -7,7 +7,7 @@ function SocialNumbersComponent() {
         <div className="max-w-3xl mx-auto">
           <div className="grid gap-12">
             <div>
-              <h2 className="text-3xl font-bold lg:text-2xl">Leadership</h2>
+              <h2 className="text-3xl font-bold lg:text-2xl">(3) Leadership</h2>
               <p className="mt-3 text-muted-foreground">
                 For as long as there have been cities, the public square has
                 been a fundamental part of the urban landscape - an open,
