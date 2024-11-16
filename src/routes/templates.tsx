@@ -1,9 +1,9 @@
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import CentredDescriptionComponent from "@/components/sections/1-centred-description";
-import CircleIconsComponent from "@/components/sections/2-circle-icons";
-import SocialNumbersComponent from "@/components/sections/3-social-numbers";
+import CentredDescriptionComponent from "@/components/sections/1-CentredDescription";
+import CircleIconsComponent from "@/components/sections/2-CircleIcons";
+import SocialNumbersComponent from "@/components/sections/3-SocialNumbers";
 
 export const Route = createFileRoute("/templates")({
   component: RouteComponent,

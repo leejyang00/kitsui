@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 function NavBar() {
   return (
-    <div className="py-6 px-2 lg:py-4 lg:px-3 max-w-3xl m-auto font-serif">
+    <div className="hidden lg:flex flex-col py-4 px-3 max-w-3xl m-auto font-serif">
       <div>
         <Link to="/">
           <h1 className="text-2xl font-serif flex justify-center items-center uppercase">
